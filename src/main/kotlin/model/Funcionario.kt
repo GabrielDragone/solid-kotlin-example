@@ -11,7 +11,7 @@ data class Funcionario (
     private val cpf: String,
     private val cargo: Cargo,
     var salario: BigDecimal,
-    private var dataUltimoReajuste: LocalDate
+    var dataUltimoReajuste: LocalDate
 ) {
 
     // Trecho abaixo extraido pra ReajusteService:
