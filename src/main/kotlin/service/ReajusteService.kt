@@ -7,13 +7,13 @@ import java.math.RoundingMode
 
 class ReajusteService {
 
-    private val ZERO_QUATRO = BigDecimal("0.4")
+    private val PERCENTUAL_LIMITE = BigDecimal("0.4")
 
     fun reajustarSalarioDoFuncionario(funcionario: Funcionario, aumento: BigDecimal) {
         val salarioAtual = funcionario.salario
         val percentualReajuste = aumento.divide(salarioAtual, RoundingMode.HALF_UP)
 
-        if (percentualReajuste.compareTo(ZERO_QUATRO) > 0) {
+        if (percentualReajuste.compareTo(PERCENTUAL_LIMITE) > 0) {
             throw ValidacaoException("Reajuste não pode ser superior a 40% do salário!")
         }
 
