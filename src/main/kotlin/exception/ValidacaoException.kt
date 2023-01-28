@@ -1,4 +1,4 @@
-package br.com.gabrieldragone.exception
+package exception
 
 data class ValidacaoException(val mensagem: String): RuntimeException(mensagem) {
 }

@@ -1,7 +1,7 @@
-package br.com.gabrieldragone.model
+package model
 
-import br.com.gabrieldragone.enum.Cargo
-import br.com.gabrieldragone.exception.ValidacaoException
+import enum.Cargo
+import exception.ValidacaoException
 import java.math.BigDecimal
 import java.math.RoundingMode
 import java.time.LocalDate
@@ -10,13 +10,14 @@ data class Funcionario (
     private val nome: String,
     private val cpf: String,
     private val cargo: Cargo,
-    private var salario: BigDecimal,
+    var salario: BigDecimal,
     private var dataUltimoReajuste: LocalDate
 ) {
 
-    private val ZERO_QUATRO = BigDecimal("0.4")
+    // Trecho abaixo extraido pra ReajusteService:
+    /*private val ZERO_QUATRO = BigDecimal("0.4")
 
-    fun reajustarSalario(aumento: BigDecimal) {
+    fun reajustarSalario(aumento: BigDecimal) { // Responsabilidade de reajustarSalario não é do Funcionario, pois ele não precisa saber como o reajuste é feito.
         val percentualReajuste = aumento.divide(this.salario, RoundingMode.HALF_UP)
 
         if (percentualReajuste.compareTo(ZERO_QUATRO) > 0) {
@@ -24,6 +25,11 @@ data class Funcionario (
         }
 
         this.salario = this.salario.add(aumento)
+        this.dataUltimoReajuste = LocalDate.now()
+    }*/
+
+    fun atualizarSalario(novoSalario: BigDecimal) {  // A responsabilidade da classe será apenas de atualizar o registro.
+        this.salario = novoSalario
         this.dataUltimoReajuste = LocalDate.now()
     }
 

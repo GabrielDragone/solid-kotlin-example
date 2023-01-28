@@ -1,4 +1,4 @@
-package br.com.gabrieldragone.enum
+package enum
 
 enum class Cargo {
     ASSISTENTE,

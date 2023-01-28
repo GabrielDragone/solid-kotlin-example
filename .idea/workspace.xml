@@ -10,6 +10,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -39,6 +46,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\solid-kotlin-example\solid-kotlin-example\src\main\kotlin" />
       <recent name="D:\Projects\solid-kotlin-example\solid-kotlin-example\src\main" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="service" />
     </key>
   </component>
   <component name="RunManager">
