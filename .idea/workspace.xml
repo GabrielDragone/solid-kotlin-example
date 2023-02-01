@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b136772-fc98-4d23-be1d-13d69306ecf3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/BaseFuncionario.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/Terceirizado.kt" afterDir="false" />
+    <list default="true" id="7b136772-fc98-4d23-be1d-13d69306ecf3" name="Changes" comment="Criada classe abstrata BaseFuncionario com atributos em comum pra herdar em Funcionario e Terceirizado, devido à limitação do Kotlin data class de herdar classe de dados, pois a linguagem utiliza do construtor pra gerar alguns métodos automáticos.">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/model/DadosPessoais.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/BaseFuncionario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/BaseFuncionario.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Funcionario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Funcionario.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/model/Terceirizado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Terceirizado.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +99,18 @@
       <option name="presentableId" value="Default" />
       <updated>1674877249754</updated>
     </task>
+    <task id="LOCAL-00001" summary="Criada classe abstrata BaseFuncionario com atributos em comum pra herdar em Funcionario e Terceirizado, devido à limitação do Kotlin data class de herdar classe de dados, pois a linguagem utiliza do construtor pra gerar alguns métodos automáticos.">
+      <created>1675218701237</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675218701237</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Criada classe abstrata BaseFuncionario com atributos em comum pra herdar em Funcionario e Terceirizado, devido à limitação do Kotlin data class de herdar classe de dados, pois a linguagem utiliza do construtor pra gerar alguns métodos automáticos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Criada classe abstrata BaseFuncionario com atributos em comum pra herdar em Funcionario e Terceirizado, devido à limitação do Kotlin data class de herdar classe de dados, pois a linguagem utiliza do construtor pra gerar alguns métodos automáticos." />
   </component>
 </project>

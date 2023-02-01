@@ -5,12 +5,14 @@ import java.math.BigDecimal
 import java.time.LocalDate
 
 data class Funcionario (
-    override var nome: String, // A data class do Kotlin cria o hashCode, equals, toString e outros métodos baseados no construtor primário.
-    override var cpf: String,  // Por isso é necessário substituir (override) os campos da classe no construtor.
-    override var cargo: Cargo,
-    override var salario: BigDecimal,
-    override var dataUltimoReajuste: LocalDate? = null
-): BaseFuncionario(nome, cpf, cargo, salario, dataUltimoReajuste) {
+//    override var nome: String, // A data class do Kotlin cria o hashCode, equals, toString e outros métodos baseados no construtor primário.
+//    override var cpf: String,  // Por isso é necessário substituir (override) os campos da classe no construtor.
+//    override var cargo: Cargo,
+//    override var salario: BigDecimal,
+//    override var dataUltimoReajuste: LocalDate? = null
+//): BaseFuncionario(nome, cpf, cargo, salario, dataUltimoReajuste) {
+    val dadosPessoais: DadosPessoais // Alterado na aula 04 - 05: Liskov Substitution Principle, utilizando composição pra dividir métodos em comum. Da maneira antiga com BaseFuncionariotambém daria certo
+) {
 
     // Trecho abaixo extraido pra ReajusteService:
     /*private val ZERO_QUATRO = BigDecimal("0.4")
@@ -27,12 +29,12 @@ data class Funcionario (
     }*/
 
     fun atualizarSalario(novoSalario: BigDecimal) {  // A responsabilidade da classe será apenas de atualizar o registro.
-        this.salario = novoSalario
-        this.dataUltimoReajuste = LocalDate.now()
+        this.dadosPessoais.salario = novoSalario
+        this.dadosPessoais.dataUltimoReajuste = LocalDate.now()
     }
 
     fun promover(novoCargo: Cargo) {
-        this.cargo = novoCargo
+        this.dadosPessoais.cargo = novoCargo
     }
 
 }
