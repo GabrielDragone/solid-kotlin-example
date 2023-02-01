@@ -1,18 +1,16 @@
 package model
 
 import enum.Cargo
-import exception.ValidacaoException
 import java.math.BigDecimal
-import java.math.RoundingMode
 import java.time.LocalDate
 
 data class Funcionario (
-    private val nome: String,
-    private val cpf: String,
-    var cargo: Cargo,
-    var salario: BigDecimal,
-    var dataUltimoReajuste: LocalDate
-) {
+    override var nome: String, // A data class do Kotlin cria o hashCode, equals, toString e outros métodos baseados no construtor primário.
+    override var cpf: String,  // Por isso é necessário substituir (override) os campos da classe no construtor.
+    override var cargo: Cargo,
+    override var salario: BigDecimal,
+    override var dataUltimoReajuste: LocalDate? = null
+): BaseFuncionario(nome, cpf, cargo, salario, dataUltimoReajuste) {
 
     // Trecho abaixo extraido pra ReajusteService:
     /*private val ZERO_QUATRO = BigDecimal("0.4")
