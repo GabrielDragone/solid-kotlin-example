@@ -9,7 +9,7 @@ import java.time.LocalDate
 data class Funcionario (
     private val nome: String,
     private val cpf: String,
-    private val cargo: Cargo,
+    var cargo: Cargo,
     var salario: BigDecimal,
     var dataUltimoReajuste: LocalDate
 ) {
@@ -31,6 +31,10 @@ data class Funcionario (
     fun atualizarSalario(novoSalario: BigDecimal) {  // A responsabilidade da classe será apenas de atualizar o registro.
         this.salario = novoSalario
         this.dataUltimoReajuste = LocalDate.now()
+    }
+
+    fun promover(novoCargo: Cargo) {
+        this.cargo = novoCargo
     }
 
 }
