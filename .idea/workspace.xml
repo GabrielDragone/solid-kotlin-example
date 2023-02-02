@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b136772-fc98-4d23-be1d-13d69306ecf3" name="Changes" comment="Criada classe abstrata BaseFuncionario com atributos em comum pra herdar em Funcionario e Terceirizado, devido à limitação do Kotlin data class de herdar classe de dados, pois a linguagem utiliza do construtor pra gerar alguns métodos automáticos.">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/tributacao/Anuenio.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/tributacao/Promocao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/tributacao/Reajuste.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/service/tributacao/ReajusteTributavel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -54,6 +60,7 @@
       <recent name="service" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="service.tributacao" />
       <recent name="service" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
